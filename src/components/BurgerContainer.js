@@ -8,7 +8,7 @@ export default class BurgerContainer extends Component {
     return (
       <div className="BurgerContainer">
         <BurgerFilter />
-        <BurgerList />
+        <BurgerList burgers={this.props.burgers} handleClick={this.props.handleClick}/>
       </div>
     )
   }
