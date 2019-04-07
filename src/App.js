@@ -7,7 +7,6 @@ import BurgerDisplay from './components/BurgerDisplay'
 class App extends Component {
 
   state = {
-    burgers: [],
     burgerToDisplay: {
       name: 'Choose Something',
       category: 'You Better Choose Something',
@@ -18,16 +17,6 @@ class App extends Component {
   handleBurgerDisplay = (burgerObj) => {
     this.setState({
       burgerToDisplay: burgerObj
-    })
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:3001/burgers')
-    .then(resp => resp.json())
-    .then(parsedResp => {
-      this.setState({
-        burgers: parsedResp
-      })
     })
   }
 
